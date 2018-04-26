@@ -1,0 +1,5 @@
+<% @borrows.each do |borrow| %>
+      <tr>
+        <td><%= link_to borrow.id, borrow_path(borrow) %>
+      </tr>
+<% end %>

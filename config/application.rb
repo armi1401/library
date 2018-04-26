@@ -15,5 +15,15 @@ module Library
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    config.generators do |generators|
+      generators.javascripts false
+      generators.helper false
+      generators.view_specs false
+      generators.helper_specs false
+      generators.controller_specs false
+      generators.model_specs false
+    end
   end
 end
+
+
