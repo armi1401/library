@@ -1,6 +1,5 @@
 <% @borrows.each do |borrow| %>
       <tr>
-        <td><%= borrow.title %></td>
-        <td><%= borrow.description %></td>
+        <td><%= link_to borrow.id, borrow_path(borrow) %>
       </tr>
 <% end %>
