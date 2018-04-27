@@ -1,7 +1,8 @@
-<%= @book.title %>
-<%= @book.author %> 
-<%= @book.description %>
-<%= @book.published %> 
-<%= @book.genre %>
-
-
+<tr>
+<td><%= @book.title %></td>
+<td><%= @book.author %></td> 
+<td><%= @book.description %></td>
+<td><%= @book.published %></td> 
+<td><%= @book.genre %></td>
+<td><%= link_to 'Back', books_path %></td>
+</tr>
