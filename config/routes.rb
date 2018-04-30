@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   get 'books/index'
   get 'books/create'
   
+update_delete_flash
   
 
+=======
+ master
   resources :books
   resources :users
   resources :borrows

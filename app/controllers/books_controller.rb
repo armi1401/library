@@ -25,6 +25,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+ update_delete_flash
   def update
     @book = Book.find(params[:id])
     if @book.update_attributes(book_params)
@@ -52,4 +53,9 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :author, :description, :published, :genre)
   end
 
+  def book_params
+    params.require(:book).permit(:title, :author, :description, :published, :genre)
+  end
+  
+master
 end
