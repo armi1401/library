@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:notice] = "User updated successfully."
+      flash[:notice] = 'User updated successfully.'
       redirect_to(user_path(@user))
     else
       render('edit')
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:notice] = "User removed successfully."
+    flash[:notice] = 'User removed successfully.'
     redirect_to(user_path)
   end
 
