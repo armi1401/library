@@ -1,7 +1,17 @@
+<% if !flash[:notice].blank? %>
+  <%= flash[:notice] %>
+  <br />
+<%  end %>
+
 <% @users.each do |user| %>
-      <tr>
-        <td><%= user.id %></td>
-        <td><%= link_to user.name, user_path(user) %></td>
-        <td><%= user.surname %></td>
-      </tr>
+<tr>
+  <td><%= user.id %></td>
+  <td><%= link_to user.name, user_path(user) %></td>
+  <td><%= user.surname %></td>
+  <td><%= link_to "Edit User", edit_user_path(user) %></td>
+  <td><%= link_to 'Destroy', user_path(user),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+  <br />
+</tr>
 <% end %>
