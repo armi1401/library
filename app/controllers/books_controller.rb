@@ -18,13 +18,12 @@ class BooksController < ApplicationController
     else
       render('new')
     end
-   
   end
 
   private
 
-    def book_params
-      params.require(:book).permit(:title, :author, :description, :published, :genre)
-    end
-
+  def book_params
+    params.require(:book).permit(:title, :author, :description, :published, :genre)
+  end
+  
 end
