@@ -5,12 +5,10 @@ Rails.application.routes.draw do
   get 'borrows/show'
   get 'books/index'
   get 'books/create'
-  
-update_delete_flash
-  
 
-=======
- master
+  update_delete_flash
+
+  master
   resources :books
   resources :users
   resources :borrows
