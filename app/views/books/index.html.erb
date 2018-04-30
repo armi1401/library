@@ -2,5 +2,6 @@
       <tr>
         <td><%= book.id %></td>
         <td><%= link_to book.title, book_path(book) %></td>
+        <td><%= link_to "New Book", new_book_path %></td>
       </tr>
 <% end %>
