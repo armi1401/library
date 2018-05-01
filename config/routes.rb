@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  root 'books#index'
   get 'users/index'
   get 'users/show'
   get 'borrows/index'
   get 'borrows/show'
-  get 'books/index'
   get 'books/create'
 
   resources :books

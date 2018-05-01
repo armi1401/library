@@ -7,8 +7,8 @@
 <tr>
   <td><%= book.id %></td>
   <td><%= link_to book.title, book_path(book) %></td>
-  <td><%= link_to "Edit Book", edit_book_path(book) %></td>
-  <td><%= link_to 'Destroy', book_path(book),
+  <td><%= link_to "Edit Book, ", edit_book_path(book) %></td>
+  <td><%= link_to 'Destroy Book', book_path(book),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
   <br />

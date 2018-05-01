@@ -6,8 +6,8 @@
 <% @borrows.each do |borrow| %>
   <tr>
     <td><%= link_to borrow.id, borrow_path(borrow) %>
-    <td><%= link_to "Edit Borrow", edit_borrow_path(borrow) %></td>
-    <td><%= link_to 'Destroy', borrow_path(borrow),
+    <td><%= link_to "Edit Borrow, ", edit_borrow_path(borrow) %></td>
+    <td><%= link_to 'Destroy Borrow', borrow_path(borrow),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
   <br />
