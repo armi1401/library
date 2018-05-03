@@ -1,7 +1,8 @@
 class User < ApplicationRecord
-  validates :name, presence: true
-  validates :surname, presence: true
-  validates :address, presence: true
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
   has_many :borrow
   has_many :users, through: :borrows
 end
