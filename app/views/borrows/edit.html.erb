@@ -24,6 +24,14 @@
     <%= form.text_field :user_id %>
   </p>
   <p>
+    <%= form.label :borrow_from %><br>
+    <%= form.date_field :borrow_from %>
+  </p>
+  <p>
+    <%= form.label :borrow_to %><br>
+    <%= form.date_field :borrow_to %>
+  </p>
+  <p>
     <%= form.submit %>
   </p>
 <% end %>

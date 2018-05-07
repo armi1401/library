@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'borrows/index'
   get 'borrows/show'
   get 'books/create'
+  get 'borrows/create'
 
   resources :books
   resources :users

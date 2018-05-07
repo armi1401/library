@@ -7,6 +7,20 @@ class BorrowsController < ApplicationController
     @borrow = Borrow.find(params[:id])
   end
 
+  def new
+    @borrow = Borrow.new
+  end
+
+  def create
+    @borrow = Borrow.new(borrow_params)
+    if @borrow.save
+      flash[:notice] = 'Borrow added successfully.'
+      redirect_to(borrow_path)
+    else
+      render('new')
+    end
+  end
+
   def edit
     @borrow = Borrow.find(params[:id])
   end
@@ -28,7 +42,7 @@ class BorrowsController < ApplicationController
   def destroy
     @borrow = Borrow.find(params[:id])
     @borrow.destroy
-    flash[:notice] = 'Book removed successfully.'
+    flash[:notice] = 'Borrow removed successfully.'
     redirect_to(borrow_path)
   end
 
