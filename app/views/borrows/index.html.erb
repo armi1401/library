@@ -5,7 +5,11 @@
 
 <% @borrows.each do |borrow| %>
   <tr>
-    <td><%= link_to borrow.id, borrow_path(borrow) %>
+    <td>Borrow id: <%= link_to borrow.id, borrow_path(borrow) %>
+    <td>Book id: <%= borrow.book_id %></td>
+    <td>User id: <%= borrow.user_id %></td>
+    <td>From: </td>
+    <td>To: </td>
     <td><%= link_to "Edit Borrow, ", edit_borrow_path(borrow) %></td>
     <td><%= link_to 'Destroy Borrow', borrow_path(borrow),
               method: :delete,
@@ -13,3 +17,6 @@
   <br />
   </tr>
 <% end %>
+
+<br />
+<td><%= link_to "Borrow a book", new_borrow_path %></td>
